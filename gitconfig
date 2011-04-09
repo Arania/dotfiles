@@ -1,0 +1,10 @@
+[core]
+  autocrlf = false
+[user]
+  name = Arania Jain 
+  email = arania@brainabove.com
+[alias]
+  co = checkout
+  br = branch
+  ci = commit
+  st = status
