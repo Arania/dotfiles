@@ -1,1 +1,2 @@
 alias agi="sudo apt-get install"
+alias ack="ack-grep"
