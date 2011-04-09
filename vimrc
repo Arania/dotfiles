@@ -32,12 +32,12 @@ imap <C-space> <Esc>
     " NERDTree
      nmap <Leader>n :NERDTreeToggle<return>
 " Need to learn to move using hjkl instead.
-map <down> <nop>
-map <left> <nop>
-map <right> <nop>
-map <up> <nop>
-imap <down> <nop>
-imap <left> <nop>
-imap <right> <nop>
-imap <up> <nop>
+"map <down> <nop>
+"map <left> <nop>
+"map <right> <nop>
+"map <up> <nop>
+"imap <down> <nop>
+"imap <left> <nop>
+"imap <right> <nop>
+"imap <up> <nop>
 
