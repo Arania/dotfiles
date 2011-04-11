@@ -1,3 +1,8 @@
+export DEBFULLNAME="Arania Jain (Key for launchpad)"
+export DEBEMAIL="arania@brainabove.com"
+
+export PATH=${PATH}:$HOME/.cabal/bin
+
 # Show branch in status line
 PS1='[\W$(__git_ps1 " (%s)")]\$ '
 export PROMPT_COMMAND='echo -ne "\033]0;${PWD/#$HOME/~}\007"'
