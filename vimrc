@@ -37,6 +37,11 @@ set nowritebackup nobackup noswapfile
 
 " No ugly sounds
 set noerrorbells
+
+" Toolbars? Really?
+set guioptions-=T
+
+" Leader!
 let mapleader=","
 
 " Easy toggle modes
