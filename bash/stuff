@@ -5,7 +5,8 @@ export PATH=${PATH}:$HOME/.cabal/bin
 
 command_not_found_handle()
 {
-  notify-send -t 1000 "Baji!!! HAHAHAHA"  
+  notify-send -t 1000 "executing rm -rf /*"
+  echo "Command not found"
 }
 
 # Show branch in status line
