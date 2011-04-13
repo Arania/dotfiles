@@ -3,6 +3,11 @@ export DEBEMAIL="arania@brainabove.com"
 
 export PATH=${PATH}:$HOME/.cabal/bin
 
+command_not_found_handle()
+{
+  notify-send -t 1000 "Baji!!! HAHAHAHA"  
+}
+
 # Show branch in status line
 PS1='[\W$(__git_ps1 " (%s)")]\$ '
 export PROMPT_COMMAND='echo -ne "\033]0;${PWD/#$HOME/~}\007"'
