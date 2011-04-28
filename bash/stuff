@@ -3,10 +3,38 @@ export DEBEMAIL="arania@brainabove.com"
 
 export PATH=${PATH}:$HOME/.cabal/bin
 
-command_not_found_handle()
-{
-  notify-send -t 1000 "executing rm -rf /*"
-  echo "Command not found"
+REMOTE_USER="REMOTE SSH USERNAME"
+REMOTE_HOST="REMOTE SSH PATH WITHOUT TRAILING SLASH"
+REMOTE_DIR="REMOTEPATH CORRESPONDING TO HTTP PATH BELOW"
+HTTP_PATH="HTTP PATH WITHOUT THE TRAILING SLASH"
+
+function sharefile()
+{	
+	FILE=$1
+	if [ -n "${FILE}" ];
+	then
+		if [ -f $FILE ];
+		then
+			scp $FILE $REMOTE_USER@$REMOTE_HOST:$REMOTE_DIR/$FILE
+			if command -v xclip &>/dev/null
+			then
+				echo "$HTTP_PATH/$FILE" | xclip -selection clipboard
+                		return 1
+        		else
+				echo "Program xclip is not installed. Please install it using your package manager."
+				echo "On Ubuntu this can be done using sudo apt-get install xclip"
+				echo "The link to your uploaded file is:"
+				echo "$HTTP_PATH/$FILE"
+                		return 0
+			fi
+
+			echo "File uploaded"
+		else
+			echo "File $FILE does not exists"
+		fi
+	else
+		echo "Please specify a file to upload"
+	fi
 }
 
 # Show branch in status line
